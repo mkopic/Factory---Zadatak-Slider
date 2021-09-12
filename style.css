@@ -1,0 +1,200 @@
+/* Umetni google font */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header - gornji dio stranice */
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+header .left-div {
+  flex: 1;
+  background-color: #ddd;
+  margin-right: 20px;
+  border-radius: 0 0 5px 5px;
+}
+header .right-div {
+  flex: 2;
+  background-color: #ddd;
+  border-radius: 0 0 5px 5px;
+  position: relative;
+}
+.header-footer-text {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+/* Box za slider i tekst */
+
+main {
+  max-width: 940px;
+  width: 100%;
+  height: 420px;
+  position: absolute;
+  margin: 0 auto;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+.text-container {
+  width: 300px;
+  /* max-width: 300px; */
+  /* width: 100%; */
+  height: 730px;
+  margin-left: 20px;
+}
+.text-container .title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.2px;
+  color: #134880;
+  margin-bottom: 20px;
+}
+.text-container .description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+  color: #484a4c;
+}
+
+/* Slider container */
+.slider-container {
+  max-width: 620px;
+  width: 100%;
+  height: 410px;
+  position: relative;
+}
+
+.top-slider,
+.bottom-slider {
+  overflow-x: hidden;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.slider-container img {
+  height: 200px;
+  /* width: fit-content; */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.slider-container img:hover {
+  transform: scale(0.8);
+  border-radius: 5px;
+  box-shadow: 0 35px 85px rgba(68, 77, 136, 0.2);
+}
+
+.top-slider {
+  display: flex;
+  /* justify-content: flex-start; */
+  gap: 10px;
+  margin-bottom: 10px;
+  direction: rtl;
+}
+
+.bottom-slider {
+  display: flex;
+  gap: 10px;
+  margin-right: 100px;
+  direction: rtl;
+  position: relative;
+}
+
+/* Button */
+.button-div {
+  position: absolute;
+  top: 210px;
+  right: 0;
+  height: 200px;
+  width: 90px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.button-div button {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  color: #ddd;
+  transition: all 0.4s ease;
+}
+.button-div button i {
+  width: 10px;
+  height: 16px;
+  pointer-events: none;
+}
+.button-div button:hover {
+  border-color: #134880;
+  color: #134880;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #ddd;
+}
+/*  Slika preko cijelog prozora */
+#fullImgBox {
+  width: 100%;
+  height: 100vh;
+  background: #13488098;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none; /* JS -- display: grid;*/
+  place-items: center;
+  z-index: 200;
+}
+
+#fullImg {
+  width: auto;
+  height: 350px;
+  border-radius: 5px;
+}
+#fullImgBox a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 34px;
+  font-weight: 600;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
